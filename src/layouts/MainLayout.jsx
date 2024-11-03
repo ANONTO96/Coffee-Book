@@ -5,10 +5,10 @@ import Navbar from "../components/Navbar";
 const MainLayout = () => {
     return (
         <div>
-            <div className="md:w-[90%] mx-auto my-3">
-            <Navbar></Navbar>
+            <div className="h-16 mb-8">
+                <Navbar></Navbar>
             </div>
-            <div className="min-h-[calc(100vh-232px)] md:w-[85%] lg:w-[75%] mx-auto">
+            <div className="min-h-[calc(100vh-232px)] md:w-[86%] lg:w-[75%] mx-auto mb-10">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

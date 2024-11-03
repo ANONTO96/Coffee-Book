@@ -2,8 +2,8 @@
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1>dashboard</h1>
+        <div className="text-center">
+            <h1>Oops...dashboard is not set yet</h1>
         </div>
     );
 };
