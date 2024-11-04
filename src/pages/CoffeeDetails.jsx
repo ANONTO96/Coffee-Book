@@ -28,10 +28,13 @@ const CoffeeDetails = () => {
             <br />
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-thin">Ingredients :</h1>
             <ul className="text-gray-600">
-                {
-                    coffee.ingredients?.map((ingredient, index) => (
+                {Array.isArray(coffee?.ingredients) && coffee.ingredients.length > 0 ? (
+                    coffee.ingredients.map((ingredient, index) => (
                         <li key={index}>{ingredient}</li>
-                    ))}
+                    ))
+                ) : (
+                    <li>No ingredients available</li>
+                )}
             </ul>
             <div className="flex justify-between items-center lg:w-[80%]">
                 <div>
