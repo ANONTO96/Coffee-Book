@@ -6,6 +6,7 @@ const CoffeeDetails = () => {
     const data = useLoaderData();
     const { id } = useParams();
     const [coffee, setCoffee] = useState({})
+    const {ingredients} = coffee;
 
     useEffect(() => {
         const singleData = data.find(coffee => coffee.id == id)
@@ -28,8 +29,8 @@ const CoffeeDetails = () => {
             <br />
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-thin">Ingredients :</h1>
             <ul className="text-gray-600">
-                {Array.isArray(coffee?.ingredients) && coffee.ingredients.length > 0 ? (
-                    coffee.ingredients.map((ingredient, index) => (
+                {Array.isArray(ingredients) && ingredients.length > 0 ? (
+                ingredients.map((ingredient, index) => (
                         <li key={index}>{ingredient}</li>
                     ))
                 ) : (
